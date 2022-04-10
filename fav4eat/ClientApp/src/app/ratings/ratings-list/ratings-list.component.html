@@ -1,8 +1,15 @@
 <div class="row">
   <div class="col-xs-12">
+    <div>
+      Selected with single click (DataService): {{ dataService.selectedItemGuid }}
+      <hr />
+      Selected with double click (EventEmitter): {{ selectedItemGuidDblClick }}
+      <hr />
+    </div>
     <ul class="list-group">
       <app-rating-item *ngFor="let ratingIt of dataService.ratings, let i = index"
-                       [rating]="ratingIt">
+                       [rating]="ratingIt"
+                       (selectedEvent)="changeSelectedItemGuid($event)">
       </app-rating-item>
     </ul>
   </div>

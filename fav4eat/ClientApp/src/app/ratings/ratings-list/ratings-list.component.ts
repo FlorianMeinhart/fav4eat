@@ -8,9 +8,14 @@ import { DataService } from '../../services/data.service';
 })
 export class RatingsListComponent implements OnInit {
 
+  selectedItemGuidDblClick: string = "nothing selected";
+
   constructor(public dataService: DataService) { }
 
   ngOnInit(): void {
   }
 
+  changeSelectedItemGuid(event: string) {
+    this.selectedItemGuidDblClick = event;
+  }
 }

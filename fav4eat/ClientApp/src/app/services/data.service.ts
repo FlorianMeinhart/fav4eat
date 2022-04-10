@@ -6,6 +6,8 @@ import { Rating } from '../ratings/rating.model';
 })
 export class DataService {
 
+  selectedItemGuid: string = "nothing selected";
+
   ratings: Rating[] = [
     {
       id: 'b77d409a-10cd-4a47-8e94-b0cd0ab50aa1',

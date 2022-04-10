@@ -1,5 +1,5 @@
 
-<a class="list-group-item clearfix">
+<a class="list-group-item clearfix" (click)="onSelectSingleClick()" (dblclick)="onSelectDblClick()">
   <div class="pull-left">
     <h4 class="list-group-item-heading">{{ rating.description }}</h4>
     <p class="list-group-item-text">{{ rating.id }}</p>
@@ -15,11 +15,11 @@
     </div>
     </div>-->
     <div class="mt-1 d-flex justify-content-between align-items-center">
-      <div #stars>
+      <div #stars id="myDiv">
         <fa-icon *ngFor="let it of [].constructor(rating.score)" [icon]="faStar" [styles]="{'color': 'gold'}"></fa-icon>
         <fa-icon *ngFor="let it of [].constructor(5 - rating.score)" [icon]="faStar" [styles]="{'color': 'grey'}"></fa-icon>
       </div>
     </div>
-    
+
   </div>
 </a>
