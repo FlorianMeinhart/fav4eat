@@ -1,0 +1,16 @@
+<form [formGroup]="ratingForm" (ngSubmit)="onSubmit()">
+
+  <label for="score">Score: </label>
+  <input id="score" class="form-control" type="number" required formControlName="score">
+  <br />
+
+  <label for="description">Description: </label>
+  <input id="description" class="form-control" type="text" required formControlName="description">
+  <br />
+
+  <label for="imgPath">Image path: </label>
+  <input id="imgPath" class="form-control" type="text" required formControlName="imgPath">
+  <br />
+
+  <button type="submit" class="btn btn-primary" [disabled]="!ratingForm.valid">add rating</button>
+</form>

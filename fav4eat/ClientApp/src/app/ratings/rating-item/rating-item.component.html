@@ -1,0 +1,25 @@
+
+<a class="list-group-item clearfix">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{ rating.description }}</h4>
+    <p class="list-group-item-text">{{ rating.id }}</p>
+  </div>
+  <div class="pull-right">
+    <img [src]="rating.imgPath" alt="" onerror="this.src='https://banner2.cleanpng.com/20180716/ghp/kisspng-dish-soul-food-hamburger-fast-food-spoon-and-fork-logo-5b4cf0224dd1f7.6045477815317688663188.jpg';" class="img-responsive" style="width: 300px;">
+
+    <!--<div class="mt-1 d-flex justify-content-between align-items-center">
+    <h5 class="review-stat">Rating</h5>
+    <div class="small-ratings">
+      <i *ngFor="let it of [].constructor(rating.score)" class="fa fa-star rating-color"></i>
+      <i *ngFor="let it of [].constructor(5 - rating.score)" class="fa fa-star"></i>
+    </div>
+    </div>-->
+    <div class="mt-1 d-flex justify-content-between align-items-center">
+      <div #stars>
+        <fa-icon *ngFor="let it of [].constructor(rating.score)" [icon]="faStar" [styles]="{'color': 'gold'}"></fa-icon>
+        <fa-icon *ngFor="let it of [].constructor(5 - rating.score)" [icon]="faStar" [styles]="{'color': 'grey'}"></fa-icon>
+      </div>
+    </div>
+    
+  </div>
+</a>
